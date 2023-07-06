@@ -32,6 +32,7 @@ public class UsersService {
 
     public Users saveOrUpdate(Users users) {
         usersRepository.save(users);
+        System.out.println(users.getId());
         return users;
     }
     public void update(Users users, int id)

@@ -13,6 +13,26 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
+//BUG: 1. POST http://localhost:8081/users
+//Content-Type: application/json
+//
+//{
+//        "name": "test",
+//        "hp": 99,
+//        "stamina": 99,
+//        "atk": 99,
+//        "def": 99,
+//        "agi": 99
+//        }
+//        ###
+//Expected: 400
+//Actual: 201
+//        Response code: 201; Time: 16ms; Content length: 0 bytes
+//        Response headers: HTTP/1.1 201
+//        Location: http://localhost:8081/users/1
+//        Content-Length: 0
+//
+
 @RestController
 @RequestMapping("/users")
 public class UsersController {
